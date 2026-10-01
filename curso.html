@@ -3,20 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Curso</title>
-<script>
-// TRAVA QUE BLOQUEIA QUEM NÃO PAGOU
-if(localStorage.getItem('pagou') !== 'sim'){
-  window.location.href='pagar.html';
-}
-</script>
+<title>AREA VIP - DELTA</title>
 <style>
-body{background:#111;color:#fff;font-family:Arial;text-align:center;padding:15px}
-.video{background:#222;padding:15px;border-radius:15px;margin:15px auto;max-width:500px;border:1px solid gold}
+body{background:#080808;color:#fff;font-family:Arial;margin:0;padding:15px;text-align:center}
+.box{max-width:500px;margin:auto}
+.m{background:#111;border:1px solid #D4AF37;border-radius:15px;padding:20px;margin:20px 0}
+.btn{background:#D4AF37;color:#000;padding:18px;border-radius:10px;display:block;text-decoration:none;font-weight:900;margin-top:15px;font-size:18px}
+h2{color:#D4AF37}
 </style>
 </head>
 <body>
-<h2 style="color:gold">🔥 CURSO LIBERADO</h2>
-<div class="video"><h3>Aula 1</h3><p>Seu vídeo aqui</p></div>
+<div class="box">
+<h2>🔥 CURSO LIBERADO</h2>
+<div class="m">
+<h3>AULA 1: MARCAÇÃO LOW FADE</h3>
+<p>Como marcar sem errar</p>
+<a class="btn" href="https://www.youtube.com/watch?v=AW-hfN6GcB4" target="_blank">▶ ASSISTIR AULA 1</a>
+</div>
+<div class="m">
+<h3>AULA 2: DEGRADÊ</h3>
+<p>Tirando a marcação</p>
+<a class="btn" href="https://www.youtube.com/watch?v=9bZkp7q19f0" target="_blank">▶ ASSISTIR AULA 2</a>
+</div>
+<div class="m">
+<h3>AULA 3: ACABAMENTO</h3>
+<p>Navalha e pezinho perfeito</p>
+<a class="btn" href="https://www.youtube.com/watch?v=kJQP7kiw5Fk" target="_blank">▶ ASSISTIR AULA 3</a>
+</div>
+</div>
 </body>
 </html>
