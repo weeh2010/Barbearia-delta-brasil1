@@ -1,6 +1,23 @@
-<script>
-if(localStorage.getItem('pagou') !== 'sim'){
-  alert('Você precisa pagar primeiro!');
-  window.location.href='pagar.html';
-}
-</script>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pagar - Barbearia Delta</title>
+<style>
+body{background:#111;color:#fff;text-align:center;font-family:Arial;padding:20px}
+.box{background:#222;padding:30px;border-radius:15px;max-width:400px;margin:40px auto;border:2px solid gold}
+.btn{background:gold;color:#000;padding:18px;display:block;text-decoration:none;font-weight:bold;border-radius:10px;margin:15px 0}
+.btn2{background:#fff;color:#111;padding:15px;display:block;text-decoration:none;font-weight:bold;border-radius:10px;margin:15px 0;border:2px dashed gold}
+</style>
+</head>
+<body>
+<div class="box">
+<h2 style="color:gold">BARBEARIA DELTA</h2>
+<p>Curso Low Fade - R$9,99</p>
+<a class="btn" href="https://mpago.la/1MbBTJ2" target="_blank">1️⃣ CLIQUE AQUI PARA PAGAR R$9,99</a>
+<a class="btn2" href="curso.html" onclick="localStorage.setItem('pagou','sim')">2️⃣ JÁ PAGUEI, LIBERAR CURSO</a>
+<p style="font-size:11px;color:#aaa">Clique no 2 só DEPOIS de pagar</p>
+</div>
+</body>
+</html>
