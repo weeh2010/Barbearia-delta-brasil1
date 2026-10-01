@@ -2,43 +2,34 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pagar Curso - Barbearia Delta</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pagar</title>
 <style>
-body{background:#111;color:#fff;font-family:Arial;text-align:center;padding:20px}
-.box{max-width:400px;margin:50px auto;background:#222;padding:30px;border-radius:15px;border:2px solid #FFD700}
-h1{color:#FFD700}
-.btn{display:block;background:#FFD700;color:#000;padding:20px;font-size:22px;font-weight:bold;text-decoration:none;border-radius:10px;margin:20px 0}
-.small{font-size:13px;color:#aaa;margin-top:20px}
-.timer{font-size:14px;color:#0f0;margin-top:15px;display:none}
+body{background:#111;color:#fff;text-align:center;font-family:Arial;padding:20px}
+.box{background:#222;padding:30px;border-radius:15px;max-width:400px;margin:40px auto;border:2px solid gold}
+.btn{background:gold;color:#000;padding:18px;display:block;text-decoration:none;font-weight:bold;border-radius:10px;margin:15px 0}
+.btn2{background:#fff;color:#111;padding:15px;display:block;text-decoration:none;font-weight:bold;border-radius:10px;margin:15px 0;border:2px dashed gold}
 </style>
 </head>
 <body>
 <div class="box">
-<h1>💈 BARBEARIA DELTA</h1>
-<h2>Curso Low Fade<br>De R$97 por R$9,99</h2>
-<p>✅ Acesso imediato<br>✅ 3 aulas completas<br>✅ Acesso vitalício</p>
+<h2 style="color:gold">BARBEARIA DELTA</h2>
+<p>Curso Low Fade - R$9,99</p>
 
-<a class="btn" onclick="pagar()" id="btnPagar">PAGAR R$9,99 AGORA</a>
+<a class="btn" href="https://mpago.la/1MbBTJ2" target="_blank" id="btnPagar">1️⃣ CLIQUE AQUI PARA PAGAR R$9,99</a>
 
-<div class="timer" id="timer">✅ Pagamento detectado! Redirecionando em <span id="count">10</span>s...</div>
+<a class="btn2" href="curso.html" onclick="return liberar()">2️⃣ JÁ PAGUEI, LIBERAR CURSO</a>
 
-<p class="small">Pagamento 100% seguro via Mercado Pago<br>Após pagar, você volta e é redirecionado AUTOMATICAMENTE pro curso!</p>
+<p style="font-size:11px;color:#aaa">Só clique no botão 2 DEPOIS de pagar no Mercado Pago</p>
 </div>
 
 <script>
-function pagar(){
-  localStorage.setItem('pagou','sim');
-  document.getElementById('timer').style.display='block';
-  let c=10;
-  setInterval(()=>{c--; document.getElementById('count').innerText=c; if(c<=0){ window.location.href='curso.html?v=4'; }},1000);
-  window.open('https://mpago.la/1MbBTJ2','_blank');
-}
-// Se a pessoa voltar do MP, já redireciona
-if(localStorage.getItem('pagou')=='sim'){
-  document.getElementById('timer').style.display='block';
-  let c=10;
-  setInterval(()=>{c--; document.getElementById('count').innerText=c; if(c<=0){ window.location.href='curso.html?v=4'; }},1000);
+function liberar(){
+  if(confirm('Você já pagou os R$9,99 no Mercado Pago?')){
+    localStorage.setItem('pagou','sim');
+    return true;
+  }
+  return false;
 }
 </script>
 </body>
