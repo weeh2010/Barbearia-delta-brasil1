@@ -3,39 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Curso Low Fade</title>
-<style>
-body{background:#111;color:#fff;font-family:Arial;padding:15px;text-align:center}
-.video{background:#222;padding:15px;border-radius:15px;margin:15px auto;max-width:500px;border:1px solid gold}
-iframe{width:100%;height:250px;border-radius:10px}
-</style>
+<title>Curso</title>
 <script>
-// TRAVA - SÓ QUEM PAGOU ENTRA
+// TRAVA QUE BLOQUEIA QUEM NÃO PAGOU
 if(localStorage.getItem('pagou') !== 'sim'){
-  alert('Você precisa pagar R$9,99 primeiro!');
   window.location.href='pagar.html';
 }
 </script>
+<style>
+body{background:#111;color:#fff;font-family:Arial;text-align:center;padding:15px}
+.video{background:#222;padding:15px;border-radius:15px;margin:15px auto;max-width:500px;border:1px solid gold}
+</style>
 </head>
 <body>
-<h2 style="color:gold">🔥 CURSO LOW FADE LIBERADO</h2>
-
-<div class="video">
-<h3>Aula 1 - Marcação</h3>
-<iframe src="https://www.youtube.com/embed/SEU_VIDEO_1" allowfullscreen></iframe>
-</div>
-
-<div class="video">
-<h3>Aula 2 - Degradê</h3>
-<iframe src="https://www.youtube.com/embed/SEU_VIDEO_2" allowfullscreen></iframe>
-</div>
-
-<div class="video">
-<h3>Aula 3 - Acabamento</h3>
-<iframe src="https://www.youtube.com/embed/SEU_VIDEO_3" allowfullscreen></iframe>
-</div>
-
-<p>Troca SEU_VIDEO_1 pelo link do seu vídeo</p>
-
+<h2 style="color:gold">🔥 CURSO LIBERADO</h2>
+<div class="video"><h3>Aula 1</h3><p>Seu vídeo aqui</p></div>
 </body>
 </html>
